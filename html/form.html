@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: black;
+            color: azure;
+        }
+
+        button:hover {
+            background-color: aqua;
+            color: black
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset style="width: 21%;">
+        <legend>Fill The Form</legend>
+    <div>
+
+    <form action="" method="post">
+        <!-- <form action="/url" method=""></form> -->
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Email">
+        <br>
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select>
+        <br>
+        <label for="course">Course</label>
+        <input type="text" id="course" placeholder="Enter Course" required list="course">
+        <br>
+        <label for="Password">password</label>
+
+        <input type="password" id="password" placeholder="Enter Password">
+        <br>
+
+        <datalist id="course">
+            <option value="java">java</option>
+            <option value="mern">mern</option>
+            <option value="c">c</option>
+            <label for="password">Password</label>
+
+
+        </datalist>
+        <br>
+        <label for="gender">Gender</label>
+        <br>
+
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="Female">Female</label>
+        <input type="radio" id="female" name="gender">
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="gender">
+
+        <br>
+        <label for="resume">Resume</label>
+        <input type="file" name="resume" id="resume" multiple accept=".pdf,.doc,.docx">
+         
+
+        <br>
+        <label for="hobbies">hobbies</label>
+        <br>
+        <label for="cricket">cricket</label>
+        <input type="checkbox" name="hobbies" id="cricket">
+        <label for="coding">coding</label>
+        <input type="checkbox" name="hobbies" id="coding">
+        <br>
+        <label for="Dob">Dob</label>
+        <input type="date" name="Dob" id="Dob" min = "2000-01-01" max = "2027-09-01">
+        <br>
+        <label for="Phone">Phone Number</label>
+        <input type="number" name="Phone" id="Phone" minlength="10" maxlength="10">
+        <br>
+        <label for="song ">range </label>
+        <input type="range" name="song" id="song">
+
+        <br>
+
+
+        <button>submit</button>
+
+    </form>
+    </div>
+
+    </fieldset>
+</body>
+</html>
