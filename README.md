@@ -54,9 +54,7 @@ The goal is to strengthen the basics before moving on to JavaScript and modern f
 WebTech/
 │── HTML/
 │── CSS/
-│── Practice Projects/
-│── Assets/
-└── README.md
+└── image
 ```
 
 > *Folder names may vary as the repository grows.*
