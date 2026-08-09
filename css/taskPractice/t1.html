@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100px;
+            margin: 200px 500px;
+        }
+        .card {
+            height: 300px;
+            width: 300px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-box{
+            height: 160px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px; 
+        }
+        input{
+            border-radius: 8px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Let's chat? - Online</h1>
+            <p>Please fill out the form below to start chatting with the next availble agent.</p>
+            <form>
+                <div class="form-box"><input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Email Address">
+                    <input type="text" placeholder="Explain your queries">
+                    <br>
+                    <button>Start Chat</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
