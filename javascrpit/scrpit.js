@@ -135,46 +135,7 @@
 
 // https://www.google.com/search?client=ubuntu-sn&channel=fs&q=hoisting+in+javascript
 
-//!scopes
 
-
-//     global variable                    local variables
-//     |      |      |
-//    var    let    const 
-//         |
-// globalscope     script scope 
-
-
-
-//     var a1 = 10; //global variables- global scope
-//     let a2 = 20; //global variables- script scope ---tdz
-//     const a3 = 30; //global variables- script scope---tdz
-//     console.log(a1,a2,a3);
-
-//     if(100>10){
-//         var b1 = 100; //global variable -- global scope
-//         let b2 = 200;//local variable -- block scope
-//         const b3 = 300;//local variable -- block scope
-//     }
-//     console.log(b1); //100
-
-
-//     function demo(){
-//         var c1 =1000; //local variable -- local scope || function scoped
-//         let c2 = 2000;//local variable -- local scope 
-//         const c3 = 3000;//local variable -- local scope 
-//     }
-//     demo();
-
-
-//!functions
-//?named function - function which has name 
-//?function hoisting only possible in named function
- greet();  //due to hoisting
-function greet(){
-    console.log("welcome");
-}
-greet();
 
 // ====================================================================
        //! SCOPES
@@ -222,6 +183,8 @@ greet();
 //     console.log("Welcome");
 // }
 // greet();
+
+
 // GEC(Global Execution context)
 // console.log("START");
 // console.log(a);
@@ -259,3 +222,4 @@ function sum(n1 = 0 ,n2 = 0, n3 = 0){
 sum(10,20, 30);
 
 
+// arguments
