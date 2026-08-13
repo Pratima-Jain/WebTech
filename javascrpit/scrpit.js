@@ -82,7 +82,7 @@
 
 //! difference between var, let and const
 
-//                         var    let    const
+//                          var    let    const
 // declare                  yes    yes     yes
 // redeclare                yes    no      no
 // declare& initialise      yes    yes     yes
@@ -117,7 +117,7 @@
 
 // a = 30;
 // console.log(a);
- 
+
 // let y = 200
 
 //const example
@@ -138,7 +138,7 @@
 
 
 // ====================================================================
-       //! SCOPES
+//! SCOPES
 // ====================================================================
 // Global variables                                                     Local variables
 //             |                                                               |
@@ -172,7 +172,7 @@
 // console.log (c1) <----- undefined
 
 // ====================================================================
-     //! FUNCTIONS
+//! FUNCTIONS
 // ====================================================================
 // 1)NamedFunction: function which has name 
 // Note --> Function hoisting is ony possible in named functions 
@@ -215,11 +215,220 @@
 
 
 // 4) Function with Aruguments and Parameters scope of parameter global
-function sum(n1 = 0 ,n2 = 0, n3 = 0){
-    console.log(arguments);
-    console.log(n1 + n2);
-};
-sum(10,20, 30);
+// function sum(n1 = 0 ,n2 = 0, n3 = 0){
+//     console.log(arguments);
+//     console.log(n1 + n2);
+// };
+// sum(10,20, 30);
 
 
-// arguments
+//! "arguments" Examples
+// function demo(a,b,...c){
+//     console.log(a,b,c);
+//     console.log(arguments);   //Array-Like Object
+//     console.log(Array.isArray(arguments));  //False
+//     console.log(Array.isArray(c));  //True
+// }
+// demo(10,20,30,40,50,60);
+// rest parameter must be last formal parameter!!! 
+
+
+//! 5) Nested Functions
+// Closure --> it is a temporary memory which is createed whenever child function tries to access
+//  parent's function property
+
+// function Parent() {
+//     let money = 50000;
+//     let house = "home";
+//     let car = "Toyota"
+//     console.log(money);
+
+//     function Child() {
+//         let saving = 5000;
+//         console.log(saving,money);  //due to closure
+//     }
+//     Child();
+// }
+// Parent();
+
+
+//! 6) Return Type Function
+// function sum(n1=0,n2=0){
+//     let result = n1+n2;
+//     console.log(result);
+//     return result;
+// }
+// let val=sum(5,20);
+// console.log(sum);
+
+
+//! 6) Higher Order Function - HOF
+// -> a function should return another function.
+// function counter() {
+//     let count = 0;
+
+//     function Child() {
+//         count++
+//         console.log("count is: ", count)
+//     }
+//     return Child;
+
+// }
+// let c1 = counter();
+// c1();
+// c1();
+// c1();
+
+// -> a function should accept another function as an
+// argument.
+
+// Example :  array.forEach(function(){})
+
+//! CALLBACK -> A function which passes as an argument
+// function calculate(x){
+
+// }
+// calculate(function(){})
+// ! 8) IMMEDIATELY INVOKE FUNCTION EXPRESSION (IIFE)
+
+// (function (){
+//      console.log("iife function!!!");
+// })();
+
+
+// ! 9) ARROW FUNCTION:- es6 ----> shorter syntax 
+
+// const f1 = () => {
+//     console.log("arrow function 1");
+// }
+// // console.log(f1);
+// f1();
+
+// const f2 = x =>{
+//     console.log("arrow function 2",x);
+// };
+// f2(10);
+
+// const f3 = x => console.log("arrow function 3");
+// f3();
+
+
+// ---> two types of return in arrow function
+
+// EXPLICIT RETURN
+// const f4 = (n1=0,n2=0) =>{
+//     return n1+n2;
+// };
+// console.log(f4(10,20));
+
+// IMPLICIT RETURN
+// const f5 = (n1=0,n2=0) => n1+n2;
+// console.log(f5(50,40));
+
+// ----> to return an object using implicit return
+// let f6 = () => ({name : "John"})
+// console.log(f6());
+
+
+// ====================================================================
+// ! OBJECTS
+// ====================================================================
+
+// --> create an object
+// const obj1 = {
+//     firstName: "JOHN",
+//     lastName: "DOE",
+//     age: "19",
+//     isAdmin: false,
+//     company: "TCS",
+// }
+
+// ! READ
+// console.log(obj1.firstName);
+// console.log(obj1.lastName);
+// console.log(obj1.age);
+// console.log(obj1.isAdmin);
+// console.log(obj1.company);
+
+// ! UPDATE KEY
+// obj1.age = 24
+// console.log(obj1.age);
+
+// ! ADD NEW KEY / update existing key
+// obj1.salary= 500000
+// console.log(obj1);
+
+// ! DELETE KEY
+// delete obj1.isAdmin
+// console.log(obj1);
+
+// ! loops in object
+// for (i in obj1) {
+// console.log(obj1.i)    //undefined
+//     console.log(obj1[i]);
+// }
+
+// let student = {
+//     sName: "hiruu",
+//     course: "nothing",
+// };
+
+// let x = "sName";
+// console.log(student[x]);
+
+// ! NESTED OBJECT
+
+// let employee = {
+//     fullName: {
+//         firstName: "JOHN",
+//         lastName: "DOE",
+//     },
+//     age: "35",
+//     address: {
+//         city: "noida",
+//         state: "up",
+//         pin: 201313,
+//         coordinates: { latitude: "394864536735", longitude: "495679475473" },
+//     },
+// };
+// console.log(employee.fullName.firstName);
+// console.log(employee.address.coordinates.latitude);
+
+// ! DESTRUCTURING
+// let user = {
+//     fName: "JANE",
+//     lName: "DOE",
+//     age: 20,
+// };
+// let { age, fName: firstName, lName, salary: sal= "NA" } = user;
+// console.log(age, firstName, lName, sal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
