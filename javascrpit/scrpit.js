@@ -403,22 +403,114 @@
 // let { age, fName: firstName, lName, salary: sal= "NA" } = user;
 // console.log(age, firstName, lName, sal);
 
+// !NESTED OBJECT DESTRUCTURING
+// let user = {
+//     name: "john doe",
+//     address:{
+//         city: "noida",
+//         state: "up",
+//     },
+// };
+
+// let { name, address:{city,state} } = user;
+// console.log(name);
+
+// console.log(address);     ERROR
+// console.log(user.address);
+// console.log(city,state);
+
+// ====================================================================
+// !ARRAYS METHODSS
+// ====================================================================
+
+// let arr1=[10,20,30,40,50];
+//         0  1  2  3  4
+// console.log(arr1);
+// console.log(arr1.length);     //5 <---property
+// console.log(arr1.)
+
+// !PUSH():- add elements at the last of an array
+// arr1.push(60,70,100);
+// console.log(arr1);
+
+// !POP():- removes element from the last of an array
+// arr1.pop();
+// console.log(arr1);
+
+// !UNSHIFT():- adds element at the starting of an array
+// arr1.unshift(100,200);
+// console.log(arr1);
+
+// !SHIFT():- removes element from the starting of an array
+// arr1.shift();
+// console.log(arr1);
+
+// !SPLICE(pos, deleteCount, newElements)
+// let arr2=[100,200,300,400,500];
+
+// [100,200,250,300,400,500]    --ADD
+// arr2.splice(2,0,250);
+// console.log(arr2);
+
+// [100,200]    --DELETE
+// arr2.splice(2,3);
+// console.log(arr2);
+
+//  --DELETE and ADD 
+// arr2.splice(1,2,"hello hello!!!");
+// console.log(arr2);
 
 
+// !SLICE(startIndex, endIndex)
+// SLICE always ignores endIndex
+
+// let arr3=[100,200,300,400];
+
+// let val1=arr3.slice(1,3);
+// console.log(val1);    // [200,300]
+
+// let val2=arr3.slice(-3,-2);
+// console.log(val2);    // [200,300]
+
+// let val3=arr3.slice(-3,3);
+// console.log(val3);    // [200,300]
 
 
+let arr4 = [10, 20, 30, 40, 50];
+
+// !forEach(()=>{})
+let res1 = arr4.forEach((ele, idx, arr) => {
+
+    console.log(ele);
+    return ele + 5;
+});
+console.log("forEach-----> ", res1);
+
+// !MAP(()=>{})
+let res2 = arr4.map((ele, idx, arr) => {
+    console.log(ele);
+    return ele + 5;
+});
+console.log("map-----> ", res2);
 
 
+// !FILTER(()=>{}) : returns new filtered array
+let res3 = arr4.filter((ele, idx, arr) => {
+    return ele > 30;
+});
+console.log("filter-----> ", res3);
 
+// !FIND(()=>{}) : returns single value which satisfy the condition
+let res4 = arr4.find((ele, idx, arr) => {
+    return ele > 300;
+});
+console.log("find-----> ", res4);
 
-
-
-
-
-
-
-
-
+// !findIndex(()=>{}) : returns single value which satisfy the condition
+let res5 = arr4.findIndex((ele, idx, arr) => {
+    return ele >200;
+});
+console.log("findIndex-----> ", res5);
 
 
 
