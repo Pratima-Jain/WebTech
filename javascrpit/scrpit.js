@@ -1,4 +1,4 @@
-// //! types of printing statements in javascript
+//! types of printing statements in javascript
 // 1. console.log()
 //document.write()<-- deprecated
 //document.writeln()<-- deprecated
@@ -18,7 +18,7 @@
 //a. primitive datatypes: primitive datatypes are the most basic data types in javascript. immutable (call by value).
 //  number, string, boolean,undefined, null, bigint, symbol
 
-//b. non-primitive datatypes: non-primitive datatypes are more complex data types that can store multiple values. mutable(call by reference). 
+//b. non-primitive datatypes: non-primitive datatypes are more complex data types that can store multiple values. mutable(call by reference).
 //  array, object, function
 
 // var v1 = 'hello'
@@ -33,7 +33,7 @@
 // console.log(v3); //UNDEFINED CAUSE WHEN WE HAVE VARIABLE BUT NOT ASSIGN ANY VALUE
 //console.log(v) NOT DEFINED CAUSE VARIABLE IS NOT DEFINED
 
-//when the system give null value for variable that is been not assign to any value 
+//when the system give null value for variable that is been not assign to any value
 //rest when the user defined the variable null then it is said to null datatype
 
 //NULL
@@ -92,7 +92,7 @@
 
 
 
-// var example 
+// var example
 // var x;
 // console.log(x);
 
@@ -137,15 +137,15 @@
 
 
 
-// ====================================================================
+//? ====================================================================
 //! SCOPES
-// ====================================================================
+// ?====================================================================
 // Global variables                                                     Local variables
 //             |                                                               |
 //   -------------------------                                    ----------------------------------
-//   var  ||  let   ||   char                                 conditionals/loops     ||       functions 
+//   var  ||  let   ||   char                                 conditionals/loops     ||       functions
 //             |                                                       |                           |
-//  --------------------------                                   --------------              --------------------- 
+//  --------------------------                                   --------------              ---------------------
 //  |                        |                                  |             |              |                   |
 //  Global Scope           Script scope               Global variables   Local variables   Global variables   Local variables
 //                                                            |               |                   |                  |
@@ -174,8 +174,8 @@
 // ====================================================================
 //! FUNCTIONS
 // ====================================================================
-// 1)NamedFunction: function which has name 
-// Note --> Function hoisting is ony possible in named functions 
+// 1)NamedFunction: function which has name
+// Note --> Function hoisting is ony possible in named functions
 // greet(); <--- due to hoisting
 
 
@@ -201,7 +201,7 @@
 
 
 
-// 2)AnonymousFunction: function without name 
+// 2)AnonymousFunction: function without name
 // function (){}
 
 
@@ -230,7 +230,7 @@
 //     console.log(Array.isArray(c));  //True
 // }
 // demo(10,20,30,40,50,60);
-// rest parameter must be last formal parameter!!! 
+// rest parameter must be last formal parameter!!!
 
 
 //! 5) Nested Functions
@@ -296,7 +296,7 @@
 // })();
 
 
-// ! 9) ARROW FUNCTION:- es6 ----> shorter syntax 
+// ! 9) ARROW FUNCTION:- es6 ----> shorter syntax
 
 // const f1 = () => {
 //     console.log("arrow function 1");
@@ -330,9 +330,9 @@
 // console.log(f6());
 
 
-// ====================================================================
+//? ====================================================================
 // ! OBJECTS
-// ====================================================================
+// ?====================================================================
 
 // --> create an object
 // const obj1 = {
@@ -419,9 +419,9 @@
 // console.log(user.address);
 // console.log(city,state);
 
-// ====================================================================
+// ?====================================================================
 // !ARRAYS METHODSS
-// ====================================================================
+// ?====================================================================
 
 // let arr1=[10,20,30,40,50];
 //         0  1  2  3  4
@@ -456,7 +456,7 @@
 // arr2.splice(2,3);
 // console.log(arr2);
 
-//  --DELETE and ADD 
+//  --DELETE and ADD
 // arr2.splice(1,2,"hello hello!!!");
 // console.log(arr2);
 
@@ -476,41 +476,148 @@
 // console.log(val3);    // [200,300]
 
 
-let arr4 = [10, 20, 30, 40, 50];
+// let arr4 = [10, 20, 30, 40, 50];
 
 // !forEach(()=>{})
-let res1 = arr4.forEach((ele, idx, arr) => {
+// let res1 = arr4.forEach((ele, idx, arr) => {
 
-    console.log(ele);
-    return ele + 5;
-});
-console.log("forEach-----> ", res1);
+// console.log(ele);
+// return ele + 5;
+// });
+// console.log("forEach-----> ", res1);
 
 // !MAP(()=>{})
-let res2 = arr4.map((ele, idx, arr) => {
-    console.log(ele);
-    return ele + 5;
-});
-console.log("map-----> ", res2);
+// let res2 = arr4.map((ele, idx, arr) => {
+//     console.log(ele);
+//     return ele + 5;
+// });
+// console.log("map-----> ", res2);
 
 
 // !FILTER(()=>{}) : returns new filtered array
-let res3 = arr4.filter((ele, idx, arr) => {
-    return ele > 30;
-});
-console.log("filter-----> ", res3);
+// let res3 = arr4.filter((ele, idx, arr) => {
+//     return ele > 30;
+// });
+// console.log("filter-----> ", res3);
 
 // !FIND(()=>{}) : returns single value which satisfy the condition
-let res4 = arr4.find((ele, idx, arr) => {
-    return ele > 300;
-});
-console.log("find-----> ", res4);
+// let res4 = arr4.find((ele, idx, arr) => {
+//     return ele > 300;
+// });
+// console.log("find-----> ", res4);
 
 // !findIndex(()=>{}) : returns single value which satisfy the condition
-let res5 = arr4.findIndex((ele, idx, arr) => {
-    return ele >200;
-});
-console.log("findIndex-----> ", res5);
+// let res5 = arr4.findIndex((ele, idx, arr) => {
+//     return ele >200;
+// });
+// console.log("findIndex-----> ", res5);
+
+
+
+// let p1 = fetch("https://dummyjson.com/users")
+// console.log(p1)
+// p1.then((respo)=>{
+//     console.log("got respo")
+//     let p2 = respo.json()
+//     console.log(p2)
+//     p2.then((data)=>{
+//         console.log(data.users)
+//     })
+//     p2.catch((error)=>{
+//         console.log("error")
+//     })
+
+
+
+// })
+// p1.catch((error)=>{
+//     console.log("error")
+// })
+
+
+
+
+
+// async function getData(){
+//     try{
+//     let url = await fetch("https://dummyjson.com/users")
+//     console.log(url)
+//     let data = await url.json()
+//     console.log(data.users)
+//     }
+//     catch{
+//         console.log("error")
+//     }
+// }
+
+// getData()
+
+
+
+
+// let dataaa = fetch("https://dummyjson.com/users/")
+// console.log(dataaa)
+// dataaa.then((respo) => {
+//     console.log("getresult")
+//     let storedata = respo.json()
+//     console.log(respo)
+//     storedata.then((storage)=>{
+//         console.log(storage.users)
+
+//     })
+
+// }
+// )
+// dataaa.catch((err)=>{
+//     console.log("err")
+
+
+// })
+
+// let dataaa = fetch("https://dummyjson.com/users/")
+// console.log(dataaa)
+// dataaa.then((respo)=>{
+// console.log("got response")
+// let gettingdata = respo.json()
+// gettingdata.then((datafromrespo)=>{
+//     console.log(datafromrespo.users)
+
+
+// })
+// gettingdata.catch((error)=>{
+// console.log("got error")
+// })
+
+// })
+// dataaa.catch((error)=>{
+// console.log("got error")
+// })
+
+
+// async function getdata() {
+//    try{ let url= await fetch("https://dummyjson.com/users/")
+//     let data = await url.json()
+//     console.log(data.users)
+// }
+// catch{
+//     console.log("got error")
+// }
+// }
+// getdata()
+
+
+// ! TIMER function
+
+// 1)set interval
+
+console.log("Start");
+ 
+    let id = setInterval(()=>{
+        console.log("yooo!!!!");
+
+    }, 5000)
+
+
 
 
 
