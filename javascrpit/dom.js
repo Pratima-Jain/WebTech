@@ -45,38 +45,86 @@ console.log("yoo!!");
 
 
 // ? DOM MAINPULATION 
-const mainTag = document.querySelector("#main-container");
-console.log(mainTag)
+// const mainTag = document.querySelector("#main-container");
+// console.log(mainTag)
 
-let h3Tag = document.createElement("h3")  // <h3></h3>
-let pTag = document.createElement("p")  // <p></p>
-let aTag = document.createElement("a")  // <a></a>
-
-
-aTag.href = "https://amazon.com";
-aTag.target="_blank"
+// let h3Tag = document.createElement("h3")  // <h3></h3>
+// let pTag = document.createElement("p")  // <p></p>
+// let aTag = document.createElement("a")  // <a></a>
 
 
+// aTag.href = "https://amazon.com";
+// aTag.target="_blank"
 
-h3Tag.textContent = "helooooo!!!"
+
+
+// h3Tag.textContent = "helooooo!!!"
 // pTag.textContent = "wooooooooo!"
-pTag.innerHTML = "<em>yayaayyy!!!</em>"
-aTag.textContent = "Amazon"
+// pTag.innerHTML = "<em>yayaayyy!!!</em>"
+// aTag.textContent = "Amazon"
 
 
-console.log(h3Tag)  //<h3>helooooo!!!</h3>
-console.log(pTag)  //<h3>helooooo!!!</h3>
-console.log(aTag) 
+// console.log(h3Tag)  //<h3>helooooo!!!</h3>
+// console.log(pTag)  //<h3>helooooo!!!</h3>
+// console.log(aTag) 
 
 
 // mainTag.appendChild(h3Tag);
 // mainTag.appendChild(pTag);
 
-mainTag.append(h3Tag, pTag, aTag)
+// mainTag.append(h3Tag, pTag, aTag)
 
 
 
+//? EVENTS ---> actions performed by the user 
+// ex: click, scroll, dblclick, load, mouseenter,mouseout,mousemove... 
 
+//! 2 ways to apply events
+// 1) using event attribute
+// 2) using addEventListener() method <------------ RECOMMENDED
+
+
+function singleClick() {
+    console.log("btn clicked once");
+}
+function doubleClick() {
+    console.log("btn clicked twice!!");
+}
+function hoverBtn() {
+    console.log("yooo!!");
+}
+
+//2) USING addEventListener("event,CallbackFn") method  <------RECOMMENDED
+
+const h3Tag = document.createElement("h3");
+h3Tag.textContent = "Click hereeee";
+h3Tag.style.color = "brown";
+
+h3Tag.addEventListener("click", () => {
+    console.log("wooooo!!!");
+});
+document.body.append(h3Tag);
+
+// const box = document.querySelector("#box");
+// console.log(box);
+
+// box.addEventListener("click", ()=>{
+//     console.log("i am divvvvvvv!!!");
+// });
+
+// ! RAINBOW TASK
+const elements =document.querySelectorAll("section");
+console.log(elements);
+
+elements.forEach((x)=>{
+x.addEventListener("mouseenter",()=>{
+    x.style.color=x.textContent;
+});
+x.addEventListener("mouseout",()=>{
+    x.style.color="black";
+});
+
+})
 
 
 
