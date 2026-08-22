@@ -75,7 +75,6 @@ console.log("yoo!!");
 // mainTag.append(h3Tag, pTag, aTag)
 
 
-
 //? EVENTS ---> actions performed by the user 
 // ex: click, scroll, dblclick, load, mouseenter,mouseout,mousemove... 
 
